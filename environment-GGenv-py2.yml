@@ -1,0 +1,14 @@
+name: GGenv-py2
+channels:
+  - defaults
+dependencies:
+  - python=2.7
+  - numpy
+  - scipy
+  - matplotlib
+  - gdal
+  - pandas
+  - geopandas
+  - patsy
+  - statsmodels
+  - affine

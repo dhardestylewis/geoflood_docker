@@ -1,0 +1,16 @@
+name: GGenv
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - numpy
+  - scipy
+  - matplotlib
+  - gdal
+  - pandas
+  - geopandas
+  - statsmodels
+  - affine
+  - rasterio
+  - numba
+  - netcdf4
