@@ -9,8 +9,7 @@ ENV MINICONDA3_VERSION latest
 ENV GEOFLOOD_VERSION main
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
-ARG CONDA_ENV_GEOFLOOD=GGenv
-ARG CONDA_ENV_GEOFLOOD_PY2=GGenv-py2
+ARG CONDA_ENV_GEOFLOOD=geoflood
 ENV PATH /opt/conda/envs/${CONDA_ENV}/bin:/opt/conda/bin:/usr/local/taudem:$PATH
 
 RUN apt-get update && \
@@ -69,13 +68,13 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-${MINICONDA3_VERSION}-Li
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate base" >> ~/.bashrc
 
+RUN conda update -y --all && \
+    conda clean -y -a
+
 RUN wget https://raw.githubusercontent.com/dhardestylewis/geoflood_docker/${GEOFLOOD_VERSION}/environment-${CONDA_ENV_GEOFLOOD}.yml -O /opt/${CONDA_ENV_GEOFLOOD}.yml && \
-    wget https://raw.githubusercontent.com/dhardestylewis/geoflood_docker/${GEOFLOOD_VERSION}/environment-${CONDA_ENV_GEOFLOOD_PY2}.yml -O /opt/${CONDA_ENV_GEOFLOOD_PY2}.yml && \
-    conda clean -a && \
-    conda env create -f /opt/${CONDA_ENV_GEOFLOOD}.yml && \
-    conda clean -a && \
-    conda env create -f /opt/${CONDA_ENV_GEOFLOOD_PY2}.yml && \
-    conda clean -a && \
+    conda clean -y -a && \
+    conda env create -y -f /opt/${CONDA_ENV_GEOFLOOD}.yml && \
+    conda clean -y -a && \
     rm /opt/*.yml && \
     echo '. `which env_parallel.bash`' >> $HOME/.bashrc
 

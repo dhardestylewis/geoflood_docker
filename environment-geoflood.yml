@@ -1,0 +1,23 @@
+name: geoflood
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - gdal
+  - numpy
+  - rasterio
+  - proj
+  - proj-data
+  - pandas
+  - geopandas
+  - matplotlib
+  - scipy
+  - psutil
+  - numba
+  - statsmodels
+  - affine
+  - netcdf4
+  - dask
+  - scikit-image
+  - scikit-fmm
