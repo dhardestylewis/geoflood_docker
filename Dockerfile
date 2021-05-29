@@ -73,7 +73,7 @@ RUN conda update -y --all && \
 
 RUN wget https://raw.githubusercontent.com/dhardestylewis/geoflood_docker/${GEOFLOOD_VERSION}/environment-${CONDA_ENV_GEOFLOOD}.yml -O /opt/${CONDA_ENV_GEOFLOOD}.yml && \
     conda clean -y -a && \
-    conda env create -y -f /opt/${CONDA_ENV_GEOFLOOD}.yml && \
+    conda env create -f /opt/${CONDA_ENV_GEOFLOOD}.yml && \
     conda clean -y -a && \
     rm /opt/*.yml && \
     echo '. `which env_parallel.bash`' >> $HOME/.bashrc
