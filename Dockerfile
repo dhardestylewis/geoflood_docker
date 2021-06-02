@@ -44,8 +44,10 @@ RUN apt-get update && \
         ca-certificates \
         curl \
         parallel \
+        subversion \
         grass \
-        grass-doc && \
+        grass-doc \
+        grass-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
