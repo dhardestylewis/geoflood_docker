@@ -54,11 +54,16 @@ RUN apt-get update && \
 ## Download and build taudem
 RUN wget -O /opt/TauDEM.tar.gz https://github.com/dtarb/TauDEM/archive/${TAUDEM_VERSION}.tar.gz && \
     tar -xvf /opt/TauDEM.tar.gz -C /opt && \
-    mkdir /opt/TauDEM-Develop/src/build
-WORKDIR "/opt/TauDEM-Develop/src/build"
-RUN cmake .. && \
-    make -j $(($(grep -c ^processor /proc/cpuinfo)-1)) && \
-    make -j $(($(grep -c ^processor /proc/cpuinfo)-1)) install && \
+    mkdir /opt/TauDEM-${TAUDEM_VERSION}/bin
+#    mkdir /opt/TauDEM-${TAUDEM_VERSION}/src/build
+#WORKDIR "/opt/TauDEM-${TAUDEM_VERSION}/src/build"
+WORKDIR "/opt/TauDEM-${TAUDEM_VERSION}/src"
+#RUN cmake .. && \
+#    make -j $(($(grep -c ^processor /proc/cpuinfo)-1)) && \
+#    make -j $(($(grep -c ^processor /proc/cpuinfo)-1)) install && \
+RUN make && \
+    mkdir -p /usr/local/taudem && \
+    cp /opt/TauDEM-${TAUDEM_VERSION}/bin/* /usr/local/taudem/ && \
     rm -Rf /opt/TauDEM*
 WORKDIR "/"
 
