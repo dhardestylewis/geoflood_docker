@@ -3,21 +3,15 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.7
+  - python
   - gdal
+  - pip
   - numpy
-  - rasterio
-  - proj
-  - proj-data
+  - rtree
+  - numba
   - pandas
   - geopandas
-  - matplotlib
-  - scipy
-  - psutil
-  - numba
-  - statsmodels
-  - affine
-  - netcdf4
-  - dask
-  - scikit-image
-  - scikit-fmm
+  - tqdm
+  - richdem
+  - rasterio
+  - rasterstats
