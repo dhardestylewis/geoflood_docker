@@ -1,4 +1,4 @@
-FROM dhardestylewis/taudem_docker:latest
+FROM dhardestylewis/taudem_docker:tacc
 
 MAINTAINER Daniel Hardesty Lewis <dhl@tacc.utexas.edu>
 
