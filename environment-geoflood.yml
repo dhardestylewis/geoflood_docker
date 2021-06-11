@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python
+  - setuptools
   - gdal
   - pip
   - numpy
