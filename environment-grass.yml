@@ -1,0 +1,9 @@
+name: grass
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - setuptools
+  - pip
+  - numpy

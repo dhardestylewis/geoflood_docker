@@ -15,12 +15,18 @@ CMD [ "/bin/bash" ]
 
 ARG GEOFLOOD_VERSION=main
 ARG CONDA_ENV_GEOFLOOD=geoflood
+ARG CONDA_ENV_GRASS=grass
 
 RUN wget \
         https://raw.githubusercontent.com/dhardestylewis/geoflood_docker/${GEOFLOOD_VERSION}/environment-${CONDA_ENV_GEOFLOOD}.yml \
         -O /opt/${CONDA_ENV_GEOFLOOD}.yml && \
+    wget \
+        https://raw.githubusercontent.com/dhardestylewis/geoflood_docker/${GEOFLOOD_VERSION}/environment-${CONDA_ENV_GRASS}.yml \
+        -O /opt/${CONDA_ENV_GRASS}.yml && \
     conda clean -y -a && \
     conda env create -f /opt/${CONDA_ENV_GEOFLOOD}.yml && \
+    conda clean -y -a && \
+    conda env create -f /opt/${CONDA_ENV_GRASS}.yml && \
     conda clean -y -a && \
     rm /opt/*.yml && \
     echo '. $(which env_parallel.bash)' >> ~/.bashrc && \
