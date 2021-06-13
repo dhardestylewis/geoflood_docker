@@ -13,7 +13,7 @@ RUN apt update -q && \
 
 CMD [ "/bin/bash" ]
 
-ARG GEOFLOOD_VERSION=main
+ARG GEOFLOOD_VERSION=tacc
 ARG CONDA_ENV_GEOFLOOD=geoflood
 ARG CONDA_ENV_GRASS=grass
 
