@@ -16,3 +16,4 @@ dependencies:
   - richdem
   - rasterio
   - rasterstats
+  - statsmodels
