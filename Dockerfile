@@ -4,6 +4,7 @@ MAINTAINER Daniel Hardesty Lewis <dhl@tacc.utexas.edu>
 
 RUN apt update -q && \
     apt install -q -y --no-install-recommends --fix-missing \
+        python3-distutils \
         grass \
         grass-doc \
         grass-dev && \
