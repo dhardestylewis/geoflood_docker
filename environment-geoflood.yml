@@ -18,3 +18,4 @@ dependencies:
   - rasterstats
   - statsmodels
   - psutil
+  - scikit-image
