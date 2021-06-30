@@ -17,3 +17,4 @@ dependencies:
   - rasterio
   - rasterstats
   - statsmodels
+  - psutil
