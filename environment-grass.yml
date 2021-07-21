@@ -5,8 +5,13 @@ channels:
 dependencies:
   - python
   - setuptools
-  - pip
+  - python-dateutil
   - numpy
-  - gdal
-  - rasterio
+  - pillow
+  - pip
+  - ply
   - six
+  - wxpython
+  - gdal
+  - matplotlib
+  - rasterio
