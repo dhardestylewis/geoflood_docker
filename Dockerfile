@@ -103,8 +103,11 @@ ENV CFLAGS "$MYCFLAGS"
 ENV CXXFLAGS "$MYCXXFLAGS"
 
 ENV NUMTHREADS=2
-RUN conda activate grass && \
-    ./configure \
+RUN eval "$(conda shell.bash hook)" && \
+    conda activate grass && \
+    git clone --depth 1 --branch 7.8.5 https://github.com/OSGeo/grass.git
+WORKDIR grass
+RUN ./configure \
         --enable-largefile \
         --with-cxx \
         --with-nls \
