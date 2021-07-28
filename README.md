@@ -10,7 +10,7 @@ GeoFlood commands may be run as one-off commands using this Docker image using t
 
 ```
 docker run --name geoflood_bash --rm -i -t --mount type=bind,sour
-ce="$(pwd)",target="/mnt/host" dhardestylewis/geoflood_docker python3 pygeonet_nonlinear_filter.py
+ce="$(pwd)",target="/mnt/host" dhardestylewis/geoflood_docker:tacc python3 pygeonet_nonlinear_filter.py
 fel.tif
 ```
 
@@ -19,7 +19,7 @@ once for all commands using the following shell command as a template:
 
 ```
 docker run --name geoflood_bash --rm -i -t --mount type=bind,source="$(pwd)
-",target="/mnt/host" dhardestylewis/geoflood_docker bash geoflood_commands.sh
+",target="/mnt/host" dhardestylewis/geoflood_docker:tacc bash geoflood_commands.sh
 ```
 
 where `geoflood_commands.sh` is written according to this template:
@@ -37,7 +37,7 @@ The Singularity pull command is similar to the Docker pull command:
 ```
 singularity pull \
     --name geoflood.sif \
-    docker://dhardestylewis/geoflood_docker:latest
+    docker://dhardestylewis/geoflood_docker:tacc
 ```
 
 Once pulled, a one-off GeoFlood command using Singularity can be issued:
@@ -67,7 +67,7 @@ docker run \
     --rm \
     -i \
     -t \
-    dhardestylewis/geoflood_docker:latest \
+    dhardestylewis/geoflood_docker:tacc \
     --mount type=bind,source="$(pwd)",target="/mnt/host" \
     bash -c './geoflood_commands.sh'
 ```
