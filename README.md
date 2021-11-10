@@ -5,7 +5,7 @@
 This [Dockerfile](https://github.com/dhardestylewis/geoflood_docker/blob/main/Dockerfile) and [taudem_docker](https://github.com/dhardestylewis/taudem_docker)'s [Dockerfile](https://github.com/dhardestylewis/taudem_docker/blob/main/Dockerfile) can be used as line-by-line
 installation instructions for TauDEM and GeoFlood's software dependencies.
 
-Note: this GeoFlood Docker image does not contain a copy of GeoFlood itself. This image provides
+*Note*: this GeoFlood Docker image does not contain a copy of GeoFlood itself. This image provides
 the software dependencies to GeoFlood. It will be necessary to separately install GeoFlood, whether
 within a GeoFlood container or separately on the host computer.
 
@@ -19,7 +19,7 @@ The general installation steps to get GeoFlood going:
 **The following instructions are for Docker. Instructions for Singularity are be
 low**.
 
-Note: In these instructions, we assume the current working directory ($PWD) contains the cloned GeoFlood repository and the parent GeoFlood input/output directories.
+*Note*: In these instructions, we assume the current working directory ($PWD) contains the cloned GeoFlood repository and the parent GeoFlood input/output directories.
 
 GeoFlood commands may be run as one-off commands using this Docker image using the
  following shell command as a template:
@@ -76,7 +76,7 @@ singularity exec \
 **GeoFlood combined with other commands in a shell script**
 
 
-Note: In these instructions, we assume the current working directory ($PWD) contains the cloned GeoFlood repository and the parent GeoFlood input/output directories.
+*Note*: In these instructions, we assume the current working directory ($PWD) contains the cloned GeoFlood repository and the parent GeoFlood input/output directories.
 
 GeoFlood may be wrapped in a shell script and run using Docker:
 
