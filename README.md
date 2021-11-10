@@ -2,7 +2,7 @@
 
 *TauDEM's InunMap & CatchHydroGeo is supported and compiles successfully by this Dockerfile.*
 
-This [Dockerfile](https://github.com/dhardestylewis/geoflood_docker/blob/main/Dockerfile) and [taudem_docker](https://github.com/dhardestylewis/taudem_docker)'s [Dockerfile](https://github.com/dhardestylewis/taudem_docker/blob/main/Dockerfile) can be used as line-by-line
+This [Dockerfile](https://github.com/dhardestylewis/geoflood_docker/blob/main/Dockerfile) and [dhardestylewis/taudem_docker](https://github.com/dhardestylewis/taudem_docker)'s [Dockerfile](https://github.com/dhardestylewis/taudem_docker/blob/main/Dockerfile) can be used as line-by-line
 installation instructions for TauDEM and GeoFlood's software dependencies.
 
 *Note*: this GeoFlood Docker image does not contain a copy of GeoFlood itself. This image provides
