@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python
+  - setuptools
   - gdal
   - pip
   - numpy
@@ -16,3 +17,5 @@ dependencies:
   - rasterio
   - rasterstats
   - statsmodels
+  - psutil
+  - scikit-image

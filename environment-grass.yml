@@ -1,0 +1,17 @@
+name: grass
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - setuptools
+  - python-dateutil
+  - numpy
+  - pillow
+  - pip
+  - ply
+  - six
+  - wxpython
+  - gdal
+  - matplotlib
+  - rasterio
